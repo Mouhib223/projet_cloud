@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      white 0%,
+      white 50%,
+      black 0%,
+      black 50%
+    );
+  }
+  
+  h1 {
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1::before {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    color: rgb(4, 124, 26);
+    width: 50%;
+    overflow: hidden;
+  }
+  

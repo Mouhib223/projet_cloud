@@ -1,0 +1,29 @@
+<div>
+  <h1>List Des Stagiaires</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">École</th>
+      <th scope="col">Filière</th>
+      <th scope="col">Niveau</th>
+      <th scope="col">Téléphone</th>
+      <th scope="col">Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stagiaire of stagiaires">
+      <td scope="row">{{ stagiaire.id }}</td>
+      <td  scope="row">{{ stagiaire.prenom }}</td>
+      <td scope="row">{{ stagiaire.nom }}</td>
+      <td scope="row">{{ stagiaire.ecole }}</td>
+      <td scope="row">{{ stagiaire.filiere }}</td>
+      <td scope="row">{{ stagiaire.niveau }}</td>
+      <td scope="row">{{ stagiaire.telephone }}</td>
+      <td>{{ stagiaire.mail }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

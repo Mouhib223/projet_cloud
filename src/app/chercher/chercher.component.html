@@ -1,0 +1,34 @@
+<div class="search-container">
+    <form (submit)="onSearch(searchId.value, $event)">
+      <input #searchId type="text" placeholder="Rechercher par ID">
+      <button type="submit">Rechercher</button>
+    </form>
+  </div>
+  <div *ngIf="stagiaire">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Nom</th>
+              <th scope="col">École</th>
+              <th scope="col">Filière</th>
+              <th scope="col">Niveau</th>
+              <th scope="col">Téléphone</th>
+              <th scope="col">Mail</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr>
+          <td  scope="row">{{ stagiaire.id }}</td>
+          <td  scope="row">{{ stagiaire.nom }}</td>
+          <td  scope="row">{{ stagiaire.prenom }}</td>
+          <td scope="row">{{ stagiaire.mail }}</td>
+          <td scope="row">{{ stagiaire.filiere }}</td>
+          <td scope="row">{{ stagiaire.niveau }}</td>
+          <td scope="row">{{ stagiaire.telephone }}</td>
+          <td scope="row">{{ stagiaire.ecole }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

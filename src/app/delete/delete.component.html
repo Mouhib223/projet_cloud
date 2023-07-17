@@ -1,0 +1,9 @@
+<div class="delete-container">
+    <h2 class="delete-title">Supprimer Stagiaire</h2>
+    <div class="input-container">
+      <label for="stagiaireId" class="input-label">Stagiaire ID:</label>
+      <input id="stagiaireId" type="number" [(ngModel)]="stagiaireId" class="input-field">
+    </div>
+    <button (click)="deleteStagiaire()" class="delete-button">Supprimer Stagiaire</button>
+  </div>
+  <app-table></app-table>
