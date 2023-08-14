@@ -7,7 +7,7 @@ import { Stagiaire } from '../models/stagiaire';
   providedIn: 'root'
 })
 export class StagiaireService {
-  private apiUrl = 'http://upetck-back-service:8080/Stagiaires';
+  private apiUrl = 'http://20.231.119.45:8080/Stagiaires';
 
   constructor(private http: HttpClient) { }
 
