@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: upteck-front-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: upetck-front
+  template:
+    metadata:
+      labels:
+        app: upetck-front
+    spec:
+      containers:
+      - name: upetck-front
+        image: raykadri/upteck_crud_angular-app:v1
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "0.1"
+          limits:
+            memory: "512Mi"
+            cpu: "0.3"
