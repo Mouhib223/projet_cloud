@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'docker-agent-label' // Use the label assigned to your Docker-enabled agent
+        label 'docker_angular_app'
     }
     environment {
         DOCKER_IMAGE_NAME = "raykadri/upteck_crud_angular-app:v8"
