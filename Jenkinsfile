@@ -18,7 +18,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 // Build the Angular app
-                sh 'npm install . '
+                sh 'npm install --force '
                 sh 'ng build '
 
                 // Build the Docker image
