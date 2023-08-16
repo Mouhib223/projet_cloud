@@ -24,7 +24,7 @@ pipeline {
                 sh 'docker build -t $DOCKER_IMAGE_NAME .'
 
                 // Log in to Docker Hub
-                withDockerRegistry(credentialsId: 'docker-hub-credentials', url: '') {
+                withDockerRegistry(credentialsId: 'dockerhub_id', url: '') {
                     // Push the Docker image to Docker Hub
                     sh 'docker push $DOCKER_IMAGE_NAME'
                 }
