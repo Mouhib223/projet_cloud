@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'docker_angular_app'
-    }
+    agent any 
     environment {
         DOCKER_IMAGE_NAME = "raykadri/upteck_crud_angular-app:v8"
     }
