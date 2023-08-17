@@ -37,7 +37,7 @@ pipeline {
          script {
                 withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
                 sh ('kubectl apply -f upteck-front-deployement.yaml')
-                }
+                }}
             }
         }
     }
