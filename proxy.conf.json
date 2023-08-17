@@ -1,0 +1,7 @@
+{
+    "/Stagiaires": {
+      "target": "http://upteck-back-service:8080",
+      "secure": false
+    }
+  }
+  
