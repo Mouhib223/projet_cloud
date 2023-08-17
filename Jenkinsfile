@@ -33,11 +33,11 @@ pipeline {
 
         stage('Deploy to AKS') {
             steps {
-                // Use Azure CLI to configure Kubernetes context (assuming you've set up Azure CLI credentials)
-                sh ' az aks get-credentials --resource-group Uptech_crud  --name Upteck'
-
-                // Apply Kubernetes deployment
-                sh "kubectl apply -f upteck-front-deployement.yaml "
+              
+         script {
+                withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
+                sh ('kubectl apply -f upteck-front-deployement.yaml')
+                }
             }
         }
     }
